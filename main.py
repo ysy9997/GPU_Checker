@@ -1,7 +1,7 @@
 from pexpect import pxssh
 import json
 
-with open('server.json', 'r') as f:
+with open('server_example.json', 'r') as f:
     cf = json.load(f)
 
 for key in cf.keys():
