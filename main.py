@@ -5,7 +5,7 @@ with open('server.json', 'r') as f:
     cf = json.load(f)
 
 for key in cf.keys():
-    print(cf[key]['user'])
+    print(key)
     s = pxssh.pxssh()
     s.login(cf[key]['host'], cf[key]['user'], bytes(cf[key]['password'], 'utf-8'), port=cf[key]['port'])
     s.sendline('nvidia-smi')
